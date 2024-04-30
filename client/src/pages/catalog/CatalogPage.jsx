@@ -6,7 +6,7 @@ export default function CatalogPage() {
   const [recipes, setRecipes] = useState();
   useEffect(() => {
     const fetchRecipe = async () => {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/recipes/`);
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/recipes`);
       const data = await response.json();
       setRecipes(data);
     };
